@@ -6,7 +6,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" href="/lunchbox/authentication/public/css/app.css" >
+<link rel="stylesheet" href="/lunchbox/public/css/app.css" >
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
   </head>
@@ -14,7 +14,7 @@
 
             <nav class="top-nav">
                   <div class="logo">
-                    <a href="{{ urlFor('home') }}"><img src="/lunchbox/authentication/public/images/logo/logo.png" alt="" /></a>
+                    <a href="{{ urlFor('home') }}"><img src="/lunchbox/public/images/logo/logo.png" alt="" /></a>
 
                   </div>
 

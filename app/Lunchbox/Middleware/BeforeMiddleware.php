@@ -55,12 +55,11 @@ class BeforeMiddleware extends Middleware
                 $credentials = explode('___', $data);
 
 
-                if(empty(trim($data)) || count($credentials) !== 2){
+                if(trim($data) == false || count($credentials) !== 2){
                     $this->app->response->redirect($this->app->urlFor('home'));
                 }else {
                     $identifier = $credentials[0];
                     $token = $this->app->hash->hash($credentials[1]);
-
 
                     $user = $this->app->user
                     ->where('remember_identifier', $identifier)

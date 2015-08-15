@@ -1,0 +1,52 @@
+.button {
+    display: inline-block;
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius:  $button-border-radius;
+    font-weight: 500px;
+    background-color: $button-bg-color;
+    @include hover-background($button-bg-color);
+
+    &.medium {
+        padding: 10px 16px;
+        font-size: 1em;
+    }
+
+    &.large {
+        padding: 12px 18px;
+        font-size: 1.1em;
+    }
+
+    &.success {
+        background-color: $success-color;
+        color: $button-success-text-color;
+        @include hover-background($success-color);
+    }
+
+    &.error {
+        background-color: $error-color;
+        color: $button-error-text-color;
+        @include hover-background($error-color);
+    }
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    margin-left: 30%;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}

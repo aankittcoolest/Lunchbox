@@ -1,0 +1,61 @@
+.top-nav {
+    background-color: $nav-bg-color;
+    height: 60px;
+    color: $nav-text-color;
+    margin-bottom: 20px;
+
+    .logo {
+        float: left;
+        height: 60px;
+        line-height: 60px;
+        margin-left: 20px;
+
+        img {
+          height: 60px;
+        }
+    }
+
+    .top-nav-items {
+        @extend %inline-list;
+
+        line-height: 60px;
+        margin-left: 40px;
+        font-size: .9em;
+
+        a {
+          float: left;
+            display: block;
+            height: 60px;
+            padding: 0 20px;
+            color: $nav-link-color;
+            font-weight: 400;
+            text-decoration: none;
+            font-size: 20px;
+
+            @include transition(color, 100ms, ease-in);
+
+            &:hover {
+              color: #fff;
+            }
+
+
+
+        }
+
+        .top-nav-items-right {
+          float: right;
+          padding-right: 5%;
+
+          a {
+            color: #FFFFFF;
+            font-family: monospace;
+            display: block;
+            font-weight: 400;
+            font-size: 20px;
+          }
+        }
+
+    }
+
+
+}

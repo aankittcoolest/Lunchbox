@@ -1,0 +1,154 @@
+/**
+*Global
+*/
+/**
+* Colors
+*/
+/**
+* Container
+*/
+/**
+* Buttons
+*/
+/**
+* Nav
+*/
+ul.inline, .top-nav .top-nav-items {
+  padding: 0;
+  margin: 0; }
+
+ul.inline li, .top-nav .top-nav-items li {
+  display: inline-block;
+  margin-right: 10px; }
+
+ul.inline li {
+  font-size: .9em; }
+  ul.inline li a {
+    text-decoration: none; }
+
+body {
+  background-image: url(http://127.0.0.1/lunchbox/authentication/public/images/background/background.png);
+  font-family: "Open Sans", sans-seriff;
+  font-size: 100%;
+  background-color: #edeff0;
+  color: #222;
+  line-height: 150%;
+  margin: 0; }
+
+a {
+  color: #000;
+  font-weight: 600; }
+
+.button {
+  display: inline-block;
+  padding: 8px 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500px;
+  background-color: #e0e0e0;
+  background-color: rgba(224, 224, 224, 0.8);
+  -webkit-transition: background-color 100ms ease-in;
+  transition: background-color 100ms ease-in; }
+  .button:hover {
+    background-color: #e0e0e0; }
+  .button.medium {
+    padding: 10px 16px;
+    font-size: 1em; }
+  .button.large {
+    padding: 12px 18px;
+    font-size: 1.1em; }
+  .button.success {
+    background-color: #5ebc41;
+    color: #fff;
+    background-color: rgba(94, 188, 65, 0.8);
+    -webkit-transition: background-color 100ms ease-in;
+    transition: background-color 100ms ease-in; }
+    .button.success:hover {
+      background-color: #5ebc41; }
+  .button.error {
+    background-color: #bb2828;
+    color: #fff;
+    background-color: rgba(187, 40, 40, 0.8);
+    -webkit-transition: background-color 100ms ease-in;
+    transition: background-color 100ms ease-in; }
+    .button.error:hover {
+      background-color: #bb2828; }
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+  margin-left: 30%; }
+
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block; }
+
+.top-nav {
+  background-color: #444;
+  height: 60px;
+  color: #fff;
+  margin-bottom: 20px; }
+  .top-nav .logo {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 20px; }
+    .top-nav .logo img {
+      height: 60px; }
+  .top-nav .top-nav-items {
+    line-height: 60px;
+    margin-left: 40px;
+    font-size: .9em; }
+    .top-nav .top-nav-items a {
+      float: left;
+      display: block;
+      height: 60px;
+      padding: 0 20px;
+      color: #FFFF66;
+      font-weight: 400;
+      text-decoration: none;
+      font-size: 20px;
+      -webkit-transition: color 100ms ease-in;
+      transition: color 100ms ease-in; }
+      .top-nav .top-nav-items a:hover {
+        color: #fff; }
+    .top-nav .top-nav-items .top-nav-items-right {
+      float: right;
+      padding-right: 5%; }
+      .top-nav .top-nav-items .top-nav-items-right a {
+        color: #FFFFFF;
+        font-family: monospace;
+        display: block;
+        font-weight: 400;
+        font-size: 20px; }
+
+.table-fonts {
+  font-size: 1.5em; }
+
+.main-heading {
+  font-size: 3em;
+  padding: 1% 2%; }
+
+.error-heading {
+  color: #bb2828; }
+
+.global {
+  text-align: center;
+  font-size: 3em;
+  padding-bottom: 30px; }
+
+.image-label {
+  font-size: 1.5em; }
+
+/*# sourceMappingURL=app.css.map */

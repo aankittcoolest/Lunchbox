@@ -11,9 +11,9 @@ return [
       'db' => [
             'driver'  => 'mysql',
             'host'    =>  '127.0.0.1',
-            'name'    => 'site',
+            'name'    => 'lunch_test',
             'username' =>   'root',
-            'password'  =>  '',
+            'password'  =>  'shivi',
             'charset'   => 'utf8',
             'collation' =>  'utf8_unicode_ci',
             'prefix'    => ''
@@ -31,11 +31,25 @@ return [
             'port'      =>   587,
             'html'    =>    true
           ],
-          'twig'  =>  [
-              'debug'   =>   true
-            ],
-            'csrf'  =>  [
-                'key'  =>   'csrf_token'
-              ]
+
+        'twig'  =>  [
+            'debug'   =>   true
+          ],
+
+        'csrf'  =>  [
+            'key'  =>   'csrf_token'
+          ],
+
+        'category' => [
+          'session'    =>  'id'
+          ],
+
+          'image' => [
+            'path'   =>  '/public/images/'
+          ],
+
+          'lang' => [
+            'language' => 'lang_country'
+            ]
 
   ];

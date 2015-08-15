@@ -23,18 +23,19 @@ class BeforeMiddleware extends Middleware
 
               }
 
-              $lang = $this->app->getCookie($this->app->config->get('lang.language'));
-
               //create language cookie
               if(!isset($_COOKIE[$this->app->config->get('lang.language')])){
-                $language = Config::load(INC_ROOT . "/app/lang/en-us.php");
                 $this->app->setcookie(
                     $this->app->config->get('lang.language'),
                     'en-us',
                     Carbon::parse('+1 week')->timestamp
                 );
+                $language = Config::load(INC_ROOT . "/app/lang/en-us.php");
+              }else{
+                $lang = $this->app->getCookie($this->app->config->get('lang.language'));
+                $language = Config::load(INC_ROOT . "/app/lang/{$lang}.php");
               }
-              $language = Config::load(INC_ROOT . "/app/lang/{$lang}.php");
+
               $this->app->lang = $language->get('lang');
 
               $this->checkRememberMe();

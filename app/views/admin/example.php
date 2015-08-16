@@ -36,6 +36,7 @@
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <form class="" action="{{ urlFor('admin.example.post') }}" method="post">
     <div class="col-md-12 text-center">
+      <input type="hidden" name="{{ csrf_key }}" value="{{ csrf_token }}">
       <input class="btn btn-primary" type="submit" name="submit" value="{{ lang.submit.stop_reservations }}">
       </div>
   </form>

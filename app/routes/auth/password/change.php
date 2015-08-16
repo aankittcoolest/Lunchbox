@@ -27,8 +27,8 @@ $app->post('/change-password', $authenticated(),  function() use ($app){
                 'password' => $app->hash->password($password)
             ]);
 
-            $app->mail->send('email/auth/password/change.php', [], function($message) use ($user){
-                $message->to($user->email);
+            $app->mail->send('email/auth/password/change.php', [], function($message) use ($app){
+                $message->to($app->auth->email);
                 $message->Subject($app->lang['mail_subject']['successful_change']);
             });
 

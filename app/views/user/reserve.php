@@ -88,6 +88,7 @@
                                   <h5><a  href="http://www.tamagoya.co.jp/menu_list.html" target="_blank">See detailed menu for today</a></h5>
                                 </div>
                                   <div class="center-align">
+                                  <input type="hidden" name="{{ csrf_key }}" value="{{ csrf_token }}">
                                   <input class="btn btn-sm btn-danger" type="submit" name="cancel" value="I would like to think again!">
 
                                   <input class="btn btn-sm btn-success" type="submit" name="confirm" value="Let's book the order!">

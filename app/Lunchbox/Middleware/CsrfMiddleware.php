@@ -11,7 +11,7 @@ class CsrfMiddleware extends Middleware
 
     public function call()
     {
-        $this ->key = $this->app->config->get('csrf.key');
+        $this->key = $this->app->config->get('csrf.key');
         $this->app->hook('slim.before', [$this, 'check']);
         $this->next->call();
     }
@@ -27,13 +27,15 @@ class CsrfMiddleware extends Middleware
 
         $token = $_SESSION[$this->key];
 
-        // if(in_array($this->app->request->getMethod(), ['POST', 'GET', 'DELETE'])) {
-        //     $submittedToken = $this->app->request()->post($this->key) ?: '';
-        //     if(!$this->app->hash->hashCheck($token, $submittedToken)){
-        //         throw new Exception("CSRF encountered!");
-        //
-        //     }
-        // }
+
+        if(in_array($this->app->request->getMethod(), ['POST', 'DELETE'])) {
+            $submittedToken = $this->app->request()->post($this->key) ?: '';
+
+            if(!$this->app->hash->hashCheck($token, $submittedToken)){
+                throw new Exception("CSRF encountered!");
+
+            }
+        }
 
         $this->app->view()->appendData([
             'csrf_key' => $this->key,

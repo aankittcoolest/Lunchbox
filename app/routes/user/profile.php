@@ -3,7 +3,7 @@
 use Lunchbox\Helpers\Date;
 
 $app->get('/u/:username', function($username) use ($app) {
-
+    $records = '';
     $date = new Date;
 
     $user = $app->user->where('username', $username)->first();

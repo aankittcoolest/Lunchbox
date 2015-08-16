@@ -120,7 +120,7 @@ return [ 'lang' => [
             'placeholders' => [
               //login placeholders
               'identifier'                =>      'Enter your username or email',
-              'password'                  =>      'Enter your password',
+              'login_password'                  =>      'Enter your password',
               //registration placeholders
               'email'                     =>      'Email', //reused for forgot password
               'username'                  =>      'Unique Username',

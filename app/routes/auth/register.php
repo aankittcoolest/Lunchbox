@@ -40,7 +40,7 @@ $app->post('/register', $guest(),function() use($app){
               $user->permissions()->create(UserPermission::$defaults);
 
               $user = $app->user->where('email', $email)->first();
-              $app->mail->send('email/auth/registered.php', ['user' => $user, 'identifier' => $identifier], function($message) use($user) {
+              $app->mail->send('email/auth/registered.php', ['user' => $user, 'identifier' => $identifier], function($message) use($user, $app) {
                   $message->to($user->email);
                   $message->subject($app->lang['mail_subject']['successful_register']);
               });

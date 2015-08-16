@@ -29,7 +29,8 @@ return [
             'username'  =>    'ilovetowriteprograms',
             'password'  =>  'sevenpounds',
             'port'      =>   587,
-            'html'    =>    true
+            'html'    =>    true,
+            'char_encode' => 'UTF-8'
           ],
 
         'twig'  =>  [

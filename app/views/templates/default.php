@@ -21,12 +21,11 @@
                   <ul class="top-nav-items">
                     <li><a href="{{ urlFor('home') }}">{{ lang.nav_bar.menu }}</a></li>
                     {% if  auth.isAdmin %}
-                    <li><a href="{{ urlFor('admin.example') }}">Admin area</a></li>
-                    <li><a href="{{ urlFor('new_menu') }}">New Menu</a></li>
-                    <li><a href="{{ urlFor('new_category') }}">New Category</a></li>
-                    <li><a href="{{ urlFor('logout') }}">{{ lang.nav_bar.logout }}</a></li>
+                    <li><a href="{{ urlFor('admin.example') }}">{{ lang.nav_bar.admin_area }}</a></li>
+                    <li><a href="{{ urlFor('new_menu') }}">{{ lang.nav_bar.new_menu }}</a></li>
+                    <li><a href="{{ urlFor('new_category') }}">{{ lang.nav_bar.new_category }}</a></li>
                     {% endif %}
-                    {% if auth and not auth.isAdmin  %}
+                    {% if auth  %}
                     <li><a href="{{ urlFor('user.profile', {username: auth.username}) }}">{{ lang.nav_bar.profile }}</a></li>
                     <li><a href="{{ urlFor('auth.password.change') }}">{{ lang.nav_bar.change_password }}</a></li>
                     <li><a href="{{ urlFor('account.profile') }}">{{ lang.nav_bar.update_profile }}</a></li>

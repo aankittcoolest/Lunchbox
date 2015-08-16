@@ -12,7 +12,7 @@ $app->get('/u/:username', function($username) use ($app) {
     }
 
     $history = $app->history->where('user_id',$user->id)
-                            ->where('lunch_date','>=',$date->getCurrentMonthFirstDay())->get();
+                            ->where('lunch_date','>=',$date->getCurrentMonthFirstDay())->orderBy('lunch_date','DESC')->get();
 
     $i = 0;
     $serial_number = 1;

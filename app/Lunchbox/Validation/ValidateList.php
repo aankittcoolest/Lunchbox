@@ -4,14 +4,16 @@ namespace Lunchbox\Validation;
 
 use Violin\Violin;
 use Lunchbox\Menu\MenuList;
+use Lunchbox\Menu\Category;
 
 class ValidateList extends Violin
 {
     protected $item;
 
-    public function __construct($app,MenuList $menu)
+    public function __construct($app,MenuList $menu,Category $category)
     {
         $this->menu_list = $menu;
+        $this->category = $category;
 
         $this->addFieldMessages([
             'menu_name' => [
@@ -21,6 +23,10 @@ class ValidateList extends Violin
               'file'  => [
                 'validUpload'   =>$app->lang['errors']['invalid_upload'],
                 'validUploadExtension' =>  $app->lang['errors']['invalid_extension_upload']
+              ],
+
+              'category_name'  => [
+                  'uniqueCategoryName'  => $app->lang['errors']['category_not_unique']
                 ]
           ]);
     }
@@ -43,6 +49,11 @@ class ValidateList extends Violin
         $allowed = array('jpg', 'jpeg', 'gif', 'png');
         $file_extn = strtolower(end(explode('.',$value)));
         return in_array($file_extn,$allowed);
+    }
+
+    public function validate_uniqueCategoryName($value, $input, $args)
+    {
+        return ! (bool) $this->category->where('name', $value)->count();
     }
 
 

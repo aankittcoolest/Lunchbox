@@ -30,7 +30,7 @@ $app->post('/recover-password', $guest(), function() use ($app){
                   'recover_hash' => $app->hash->hash($identifier)
                 ]);
 
-                $app->mail->send('email/auth/password/recover.php', ['user' => $user, 'identifier' => $identifier], function($message) use ($user){
+                $app->mail->send('email/auth/password/recover.php', ['user' => $user, 'identifier' => $identifier], function($message) use ($user,$app){
                       $message->to($user->email);
                       $message->Subject($app->lang['mail_subject']['successful_change']);
                 });

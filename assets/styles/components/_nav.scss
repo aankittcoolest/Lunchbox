@@ -20,7 +20,7 @@
 
         line-height: 60px;
         margin-left: 40px;
-        font-size: .9em;
+        font-size: 1.6em;
 
         a {
           float: left;
@@ -30,7 +30,7 @@
             color: $nav-link-color;
             font-weight: 400;
             text-decoration: none;
-            font-size: 20px;
+
 
             @include transition(color, 100ms, ease-in);
 
@@ -45,13 +45,16 @@
         .top-nav-items-right {
           float: right;
           padding-right: 5%;
-
+          font-size: 1em;
           a {
             color: #FFFFFF;
             font-family: monospace;
             display: block;
             font-weight: 400;
-            font-size: 20px;
+
+            &:hover {
+              color: $nav-link-color;
+            }
           }
         }
 

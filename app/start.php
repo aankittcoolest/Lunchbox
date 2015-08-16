@@ -77,7 +77,7 @@ $app->config = Config::load(INC_ROOT . "/app/config/{$app->mode}.php");
   });
 
   $app->container->singleton('validateList', function() use($app){
-      return new ValidateList($app,$app->menu_list);
+      return new ValidateList($app,$app->menu_list,$app->categories);
   });
 
   $app->container->singleton('mail', function() use($app){
@@ -90,6 +90,7 @@ $app->config = Config::load(INC_ROOT . "/app/config/{$app->mode}.php");
       $mailer->Port = $app->config->get('mail.port');
       $mailer->Username = $app->config->get('mail.username');
       $mailer->Password = $app->config->get('mail.password');
+      $mailer->CharSet = $app->config->get('mail.char_encode');
 //      $mail->From       = $app->config->get('mail.username');
       $mailer->SMTPDebug = 2;
 

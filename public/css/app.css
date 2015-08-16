@@ -27,7 +27,7 @@ ul.inline li {
     text-decoration: none; }
 
 body {
-  background-image: url(http://127.0.0.1/lunchbox/authentication/public/images/background/background.png);
+  background-image: url(http://127.0.0.1/lunchbox/public/images/background/background.png);
   font-family: "Open Sans", sans-seriff;
   font-size: 100%;
   background-color: #edeff0;
@@ -109,7 +109,7 @@ a {
   .top-nav .top-nav-items {
     line-height: 60px;
     margin-left: 40px;
-    font-size: .9em; }
+    font-size: 1.6em; }
     .top-nav .top-nav-items a {
       float: left;
       display: block;
@@ -118,20 +118,21 @@ a {
       color: #FFFF66;
       font-weight: 400;
       text-decoration: none;
-      font-size: 20px;
       -webkit-transition: color 100ms ease-in;
       transition: color 100ms ease-in; }
       .top-nav .top-nav-items a:hover {
         color: #fff; }
     .top-nav .top-nav-items .top-nav-items-right {
       float: right;
-      padding-right: 5%; }
+      padding-right: 5%;
+      font-size: 1em; }
       .top-nav .top-nav-items .top-nav-items-right a {
         color: #FFFFFF;
         font-family: monospace;
         display: block;
-        font-weight: 400;
-        font-size: 20px; }
+        font-weight: 400; }
+        .top-nav .top-nav-items .top-nav-items-right a:hover {
+          color: #FFFF66; }
 
 .table-fonts {
   font-size: 1.5em; }
@@ -150,5 +151,13 @@ a {
 
 .image-label {
   font-size: 1.5em; }
+
+.center-align {
+  text-align: center; }
+
+.form-headings {
+  color: #73735C;
+  font-weight: bold;
+  font-size: 1.3em; }
 
 /*# sourceMappingURL=app.css.map */

@@ -17,7 +17,7 @@ $app->post('/account/language-settings', function() use ($app){
     $app->deleteCookie($app->config->get('lang.language'));
     $app->setcookie(
         $app->config->get('lang.language'),
-        "ja-jp",
+        $lang,
         Carbon::parse('+1 week')->timestamp
     );
 

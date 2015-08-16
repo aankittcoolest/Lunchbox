@@ -27,9 +27,10 @@ return [
             'smtp_secure' =>  'tls',
             'host'      =>  'smtp.gmail.com',
             'username'  =>    'ilovetowriteprograms',
-            'password'  =>  'sevenpounds',
+            'password'  =>  '05652404625',
             'port'      =>   587,
-            'html'    =>    true
+            'html'    =>    true,
+            'char_encode' => 'UTF-8'
           ],
 
         'twig'  =>  [

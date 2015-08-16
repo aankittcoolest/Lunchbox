@@ -4,7 +4,36 @@
 
 return [ 'lang' => [
           'main_heading' => [
+            'welcome'    => 'Welcome'
+          ],
 
+          'headings'    =>  [
+            'register'  => 'Welcome! Lunchbox is waiting to serve you better.',
+            'login'     =>  'Sign in',
+            'reset'     =>   'Enter details for password reset.',
+            'update_profile'  => 'Update Profile.',
+            'order_history'   => 'Your Order History',
+            'new_menu'        =>    'Create New Menu',
+            'new_category'    =>    'Create New Category',
+            'change_language' =>    'Select Your Language',
+            'current_email'   =>    'Enter your Current Email Address',
+            'new_password'    =>    'Enter your New Password'
+          ],
+
+          'table_headings'  => [
+            'serial_number'   =>    'Serial Number',
+            'category'        =>    'Lunch Category',
+            'amount'          =>    'Amount',
+            'date'            =>    'Date',
+            'customer_name'   =>    'Customer Name'
+          ],
+
+          'inputs'      =>  [
+            'remember_me'   =>  'Remember Me'
+          ],
+
+          'links'       =>  [
+            'forgot_password'  => 'Forgot your password?'
           ],
 
             'errors'    => [
@@ -19,7 +48,9 @@ return [ 'lang' => [
               //upload file not valid
               'invalid_upload'          =>      'Please upload a image.',
               //upload file extension not valid
-              'invalid_extension_upload'=>      'Please upload a valid file.'
+              'invalid_extension_upload'=>      'Please upload a valid file.',
+              //category not unique error
+              'category_not_unique'     =>      'This category already exists.'
               ],
 
             'messages'  => [
@@ -46,11 +77,13 @@ return [ 'lang' => [
                 //Update Profile
               'successful_update'         =>      'Your details have been updated successfully.',
               //Language messages
-              'successful_lang_update'    =>      'Your language preference has been successfully saved!',
+              'successful_lang_update'    =>      '使用する言語が選択されました',
               //new list creation
               'successful_creation'       =>      'A new list has been created successfully.',
               //Successful order reservation message
               'successful_reservation'    =>      'Your order has been placed!',
+              //Successful category creation
+              'successful_category'       =>       'A new category has been created successfully.'
               ],
 
             'mail_subject'  => [
@@ -98,7 +131,31 @@ return [ 'lang' => [
               //Update Profile
               'first_name'                =>      'First Name',
               'last_name'                 =>      'Last Name',
+              //create new menu
+              'menu_name'                 =>      'Menu Name',
+              'menu_image'                =>       'Upload the Menu Image',
+              //create new category
+              'category_name'             =>      'Category Name',
+              'amount'                    =>      'Amount'
+            ],
 
+            'submit'  => [
+              //submit login
+              'login'                    =>       'Login',
+              //submit registration
+              'register'                 =>       'Register',
+              //submit password reset
+              'reset'                    =>        'Request reset',
+              //submit update profile
+              'update_profile'           =>       'Update profile',
+              //stop taking reservations
+              'stop_reservations'        =>       'Stop taking lunch reservations for today.',
+              //create new menu or category
+              'create'                   =>       'create',
+              //change language
+              'change_language'          =>       'Change Language',
+              //request for reset password
+              'request_reset'            =>       'Send Reset Mail'
               ]
             ]
 ];

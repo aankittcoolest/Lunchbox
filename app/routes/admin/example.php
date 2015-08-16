@@ -36,9 +36,8 @@ if(count($todays_order)){
 
 })->name('admin.example');
 
-
 $app->post('/admin/example', $admin(), function() use ($app) {
-
+$todays_record = '';
 $date = new Date();
 
   $app->admin_list->create([

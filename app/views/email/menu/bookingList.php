@@ -2,11 +2,6 @@
 
 {% block content %}
   <p>
-    Hello Admin,
-
-  </p>
-
-  <p>
     We got the following bookings for today!
   </p>
 

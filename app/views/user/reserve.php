@@ -4,6 +4,11 @@
 
 {% block content %}
 
+{% if mail_send and today == 'Friday'  %}
+
+      <h4><label class="label label-danger">Sorry, we have stopped taking reservations for this week.</label></h4>
+
+{% else %}
 
 {% if not category %}
 
@@ -45,7 +50,12 @@
 
 
 {% if category %}
+{% if mail_send %}
+<div class="center-align">
+    <h4><label class="label label-warning ">Sorry, we have stopped taking reservations for today.</label></h4>
+</div>
 
+{% endif %}
 <div class="col-md-12">
     <div class="modal-dialog" style="margin-bottom:0">
         <div class="modal-content">
@@ -57,25 +67,31 @@
                             <div class="center">
                               <fieldset>
 
-                                  <h3><label class="label label-primary" for="category" name="category">{{ category }}</label></h3>
+                                  <div class="center-align">
+                                      <h3><label class="label label-default " for="category" name="category">{{ category }}</label></h3>
+                                  </div>
 
                                   <div class="form-group">
-                                    <select  class="form-control" name="order" >
 
+                                    <select  class="form-control" name="order" >
+                                        {% if not mail_send  %}
                                         <option value="1">Book lunch for today</option>
+                                        {% endif %}
+                                        {% if  today != 'Friday' %}
                                         <option value="2">Book lunch for tomorrow</option>
                                         <option value="3">Book lunch for whole week</option>
+                                        {% endif %}
                                     </select>
                                   </div>
 
                                   <div class="form-group">
-                                  <a class="btn btn-sm btn-info" href="#">See detailed menu for today</a>
+                                  <h5><a  href="http://www.tamagoya.co.jp/menu_list.html" target="_blank">See detailed menu for today</a></h5>
                                 </div>
-
+                                  <div class="center-align">
                                   <input class="btn btn-sm btn-danger" type="submit" name="cancel" value="I would like to think again!">
 
                                   <input class="btn btn-sm btn-success" type="submit" name="confirm" value="Let's book the order!">
-
+                                </div>
                               </fieldset>
                             </div>
 
@@ -86,5 +102,9 @@
     </div>
 </div>
 {% endif %}
+
+{% endif %}
+
+
 
 {% endblock %}

@@ -8,18 +8,18 @@
 
 <table class="table table-striped table-fonts" >
   <tr style='background: #B3C0CC;'>
-    <th>Serial Number</th>
-    <th>Customer Name</th>
-    <th>Lunch Category</th>
-    <th>Amount</th>
+    <th><div class="center-align">{{ lang.table_headings.serial_number }}</div></th>
+    <th><div class="center-align">{{ lang.table_headings.customer_name }}</div></th>
+    <th><div class="center-align">{{ lang.table_headings.category }}</div></th>
+    <th><div class="center-align">{{ lang.table_headings.amount }}</div></th>
   </tr>
 
 {% for today_record in todays_record %}
   <tr >
-    <td>{{ today_record.id }}</td>
-    <td>{{ today_record.username }}</td>
-    <td>{{ today_record.category_name }}</td>
-    <td>{{ today_record.amount }}</td>
+    <td><div class="center-align">{{ today_record.id }}</div></td>
+    <td><div class="center-align">{{ today_record.username }}</div></td>
+    <td><div class="center-align">{{ today_record.category_name }}</div></td>
+    <td><div class="center-align">{{ today_record.amount }}</div></td>
   </tr>
 {% endfor %}
   </table>
@@ -36,7 +36,7 @@
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <form class="" action="{{ urlFor('admin.example.post') }}" method="post">
     <div class="col-md-12 text-center">
-      <input class="btn btn-primary" type="submit" name="submit" value="Stop taking lunch reservations for today.">
+      <input class="btn btn-primary" type="submit" name="submit" value="{{ lang.submit.stop_reservations }}">
       </div>
   </form>
 </nav>

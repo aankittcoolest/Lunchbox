@@ -109,7 +109,9 @@ return [ 'lang' => [
               'change_language'           =>      'Change Language',
               //admin area
               'admin_area'                =>      'Admin Area',
-              'new_item'                  =>      'New List',
+              'new_menu'                  =>      'New Menu',
+              'new_category'              =>      'New Category',
+              'stop_reservations'         =>      'Stop Reservations',
               //right menu
               'register'                  =>      'Register',
               'login'                     =>      'Login'

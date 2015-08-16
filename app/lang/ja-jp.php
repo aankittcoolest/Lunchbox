@@ -110,6 +110,7 @@ return [ 'lang' => [
               'admin_area'                =>      '管理画面',
               'new_menu'                  =>      '新メニュー',
               'new_category'              =>      '新カテゴリ',
+              'stop_reservations'         =>      '予約止まる',
               //right menu
               'register'                  =>     '新規登録',
               'login'                     =>     'ログイン'
